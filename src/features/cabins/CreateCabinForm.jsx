@@ -16,7 +16,6 @@ function CreateCabinForm({ onCloseModal }) {
   const { isCreating, createCabin } = useCreateCabin();
 
   function onSubmit(data) {
-    // console.log({ ...data, image: data.image[0] });
     createCabin(
       { ...data, image: data.image[0] },
       {
@@ -24,16 +23,12 @@ function CreateCabinForm({ onCloseModal }) {
           reset();
           onCloseModal();
         },
-      }
+      },
     );
   }
 
-  function onError(errors) {
-    // console.log(errors);
-  }
-
   return (
-    <Form onSubmit={handleSubmit(onSubmit, onError)} type="modal">
+    <Form onSubmit={handleSubmit(onSubmit)} type="modal">
       <FormRow label="Cabin name" error={errors?.name?.message}>
         <Input
           type="text"

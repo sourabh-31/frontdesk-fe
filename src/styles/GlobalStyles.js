@@ -114,7 +114,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   color: var(--color-grey-700);
 
   transition: color 0.3s, background-color 0.3s;

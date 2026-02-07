@@ -37,15 +37,14 @@ function CabinTable() {
   const sortedCabins = filteredCabins?.sort((a, b) =>
     typeof a[field] === "string"
       ? a[field].localeCompare(b[field]) * modifier
-      : (a[field] - b[field]) * modifier
+      : (a[field] - b[field]) * modifier,
   );
 
   return (
     <Menus>
-      <Table columns="0.6fr 1.8fr 2.2fr 1fr 1fr 1fr">
+      <Table columns="1fr 1.2fr 1fr 1fr 0.2fr">
         <Table.Header>
-          <div></div>
-          <div>Cabin</div>
+          <div>Room</div>
           <div>Capacity</div>
           <div>Price</div>
           <div>Discount</div>

@@ -35,8 +35,7 @@ function BookingDetail() {
   const moveBack = useMoveBack();
 
   if (isLoading) return <Spinner />;
-  if (!booking.length) return <Empty resource="booking" />;
-  console.log(booking);
+  if (!booking) return <Empty resource="booking" />;
 
   const { id: bookingId, status } = booking;
 
